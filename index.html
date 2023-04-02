@@ -1,0 +1,80 @@
+    <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title id="WebTitle">💲Spending App💲</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body id="bg">
+                
+            <div class="Welcome">Welcome</div>
+           
+        
+            <div class="circle">
+                <div class="center">
+                    <h1>Login</h1>
+                    <form method="post">
+                      <div class="txt_field">
+                        <input type="text" required>
+                        <span></span>
+                        <label>Username</label>
+                      </div>
+                      <div class="txt_field">
+                        <input type="password" required>
+                        <span></span>
+                        <label>Password</label>
+                      </div>
+                      <input type="submit" value="Login">
+                      <div class="pass">Forgot Password?</div>
+                      <div>
+                      </div>
+                    </form>
+                  </div>
+            </div>
+
+            <div class="loginText">
+           
+            </div>
+
+        <script>
+                const element = document.querySelector('.Welcome');
+                const circle = document.querySelector('.circle');
+                const login = document.querySelector('.center');
+                var animationCount = 0;
+                var animationCircleCount = 0;
+
+                element.addEventListener('animationend', () => {
+                // Increment the animation count
+                animationCount++;
+                
+
+                // If all three animations have finished, hide the element
+                if (animationCount === 3) {
+                    circle.style.display = 'flex';
+                }
+
+                if (animationCount === 4) {
+                    element.style.display = 'none';
+                }
+                
+
+
+                });
+
+                circle.addEventListener('animationend', () => {
+                // Increment the animation count
+                animationCircleCount++;
+
+                if (animationCircleCount === 3) {
+                    login.style.display = 'initial';
+                }
+
+              });
+
+
+        </script>
+    </body>
+</html> 
